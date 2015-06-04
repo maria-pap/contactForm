@@ -1,40 +1,91 @@
-<!doctype html>
+﻿<!doctype html>
 <html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Contact form</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+    <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <form id="contactForm" name="contactForm" method="get">
+        <fieldset>
+            <legend></legend>
+            <label for="firstName" class="requiredLabel">First name</label>
+            <input id="firstName" name="firstName" type="text" required />
+            <label for="surname" class="requiredLabel">Surname</label>
+            <input id="surname" name="surname" type="text" required />
+            <label for="emailAddress" class="requiredLabel">Email address</label>
+            <input id="emailAddress" name="emailAddress" type="text" required />
+            <label for="daytimeContact" class="requiredLabel">Daytime contact number</label>
+            <input id="daytimeContact" name="daytimeContact" type="text" required />
+        </fieldset>
+        <fieldset>
+            <legend></legend>
+            <label for="address" class="requiredLabel">Address</label>
+            <input id="address" name="address" type="text" required />
+            <label for="suburb" class="requiredLabel">Suburb</label>
+            <input id="suburb" name="suburb" type="text" required />
+            <label for="state" class="requiredLabel">State</label>
+            <select id="state" name="state" required>
+                <option value="">--- Select ---</option>
+                <option value="ACT">ACT</option>
+                <option value="NSW">NSW</option>
+                <option value="NT">NT</option>
+                <option value="QLD">QLD</option>
+                <option value="SA">SA</option>
+                <option value="TAS">TAS</option>
+                <option value="VIC">VIC</option>
+                <option value="WA">WA</option>
+            </select>
+            <label for="postcode" class="requiredLabel">Postcode</label>
+            <input id="postcode" name="postcode" type="text" required />
+        </fieldset>
 
-        <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <!-- Place favicon.ico in the root directory -->
+        <fieldset>
+            <legend></legend>
+            <label for="enquiryType" class="requiredLabel redletters">Enquiry type</label>
+            <select id="enquiryType" name="enquiryType" required>
+                <option value="">--- Select ---</option>
+                <option value="general">General enquiry</option>
+                <option value="product">Product feedback or enquiry</option>
+                <option value="complaint">Product complaint</option>
+            </select>
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    </head>
-    <body>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+            <div class="complaintDepedent">
+                <label for="productName">Product name</label>
+                <input id="productName" name="productName" type="text" />
+            </div>
+            <div class="complaintDepedent">
+                <label for="productSize">Product size</label>
+                <input id="productSize" name="productSize" type="text" />
+            </div>
+            <div class="complaintDepedent">
+                <label for="usedByDate">Use-by date</label>
+                <input id="usedByDate" name="usedByDate" type="text" />
+            </div>
+            <div class="complaintDepedent">
+                <label for="batchCode">Batch code</label>
+                <input id="batchCode" name="batchCode" type="text" />
+            </div>
 
-        <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-        </script>
-    </body>
+            <label for="enquiryText">Enquiry</label>
+            <textarea id="enquiryText" name="enquiryText"></textarea>
+        </fieldset>
+        <input id="btnSubmit" name="btnSubmit" type="submit" value="SUBMIT >" />
+    </form>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
